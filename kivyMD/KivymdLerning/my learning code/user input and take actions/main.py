@@ -2,11 +2,13 @@
 #tutorial
 from kivymd.app import MDApp
 from kivymd.uix.screen import Screen
-#from kivymd.uix.textfield import MDTextField
+# from kivymd.uix.textfield import MDTextField
+from kivymd.uix.label import MDLabel
+
 from kivy.lang import  Builder
 from kivymd.uix.button import MDRectangleFlatButton  #kivymd button
 import helpers # accessing a file in the same directory
-
+# import gps
 
 class DemoApp(MDApp):
     def build(self):
@@ -16,7 +18,7 @@ class DemoApp(MDApp):
         # username = MDTextField(text='Enter',pos_hint={'center_x': 0.5, 'center_y': 0.5},
         #                         size_hint_x=None, width=200)
         # screen.add_widget(username)
-        btn=MDRectangleFlatButton(text='show',pos_hint={'center_x': 0.5, 'center_y': 0.4},
+        btn=MDRectangleFlatButton(text='Sumbit',pos_hint={'center_x': 0.5, 'center_y': 0.4},
 
                                     on_release=self.show_data
 
@@ -29,8 +31,14 @@ class DemoApp(MDApp):
         return screen
 
     def show_data(self, obj):
+        #location =gps()
 
+        location=[30.12,40.30]
         print(self.username.text)
+        print("GPS coordinates:", location)
+        screen = Screen().clear_widgets()
 
+
+        return screen
 
 DemoApp().run()

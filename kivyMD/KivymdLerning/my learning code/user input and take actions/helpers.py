@@ -1,6 +1,6 @@
 username_helper = """
 MDTextField: 
-    hint_text: "Enter username"
+    hint_text: "Enter Mobile Number"
     helper_text: "or click on forgot username"
     helper_text_mode: "on_focus"
     icon_right: "android"
